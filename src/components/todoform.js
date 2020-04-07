@@ -8,6 +8,8 @@ const TodoForm = () => {
             placeholder='add a new todo'
             name='item'
             />
+            <button>add todo</button>
+            <button>clear completed todos</button>
         </form>
     )
 }
