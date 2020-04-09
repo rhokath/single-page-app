@@ -21,6 +21,15 @@ const TodoList = () => {
         <div>
             TodoList
             <TodoItem/>
+            {todos.map(todo => {
+                console.log(todo)
+                return <TodoItem 
+                key={todo.id}
+                id={todo.id}
+                item={todo.item}
+                completed={todo.completed}
+                />
+            })}
         </div>
     )
 }
