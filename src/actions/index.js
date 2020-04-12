@@ -4,6 +4,7 @@
 //dispatch
 //action types
 export const ADD_TODO = "ADD_TODO"
+export const TOGGLE_COMPLETE = "TOGGLE_COMPLETE"
 
 //action creators
 
@@ -17,5 +18,11 @@ export const addTodo = newTodo => {
 //remove todo
 
 //toggle todo
+export const toggleComplete = id => {
+    return{
+        type: TOGGLE_COMPLETE,
+        payload: id
+    }
+}
 
 //clear completed

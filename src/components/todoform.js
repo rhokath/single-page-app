@@ -9,6 +9,7 @@ const TodoForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         dispatch(addTodo(newTodo))
+        setNewTodo('')
 
     }
     const handleChange = e => {
