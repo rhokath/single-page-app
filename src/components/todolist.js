@@ -20,7 +20,6 @@ const TodoList = () => {
     return(
         <div>
             TodoList
-            <TodoItem/>
             {todos.map(todo => {
                 console.log(todo)
                 return <TodoItem 

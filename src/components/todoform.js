@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState} from 'react'
 import {useDispatch} from 'react-redux'
-import { addTodo } from '../actions/index'
+import { addTodo, clearCompleted } from '../actions/index'
 
 const TodoForm = () => {
     const dispatch = useDispatch()
@@ -9,12 +9,17 @@ const TodoForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         dispatch(addTodo(newTodo))
-        setNewTodo('')
+        // setNewTodo('')
 
     }
     const handleChange = e => {
         console.log('value', e.target.value)
         setNewTodo(e.target.value)
+    }
+    const handleClear = e => {
+        e.preventDefault()
+        dispatch(clearCompleted())
+        
     }
     return(
         <form onSubmit={e => handleSubmit(e)}>
@@ -26,7 +31,7 @@ const TodoForm = () => {
             onChange={handleChange}
             />
             <button>add todo</button>
-            <button>clear completed todos</button>
+            <button onClick={(e)=> handleClear(e)}>clear completed todos</button>
         </form>
     )
 }

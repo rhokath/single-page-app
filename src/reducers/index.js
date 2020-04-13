@@ -1,5 +1,5 @@
 //import actions
-import { ADD_TODO, TOGGLE_COMPLETE} from '../actions/index'
+import { ADD_TODO, TOGGLE_COMPLETE, CLEAR_COMPLETED} from '../actions/index'
 //initialize state
 
 const initialState = {
@@ -44,6 +44,11 @@ export const rootReducer = (state = initialState, action)=>{
                     ...state,
                     todos: state.todos.map(todo =>
                         todo.id === action.payload ?{...todo, completed: !todo.completed}:todo)
+                }
+            case CLEAR_COMPLETED:
+                return{
+                    ...state,
+                    todos: state.todos.filter(({completed})=> !completed)
                 }
         default:
             return state;

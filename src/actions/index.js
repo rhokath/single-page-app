@@ -5,6 +5,7 @@
 //action types
 export const ADD_TODO = "ADD_TODO"
 export const TOGGLE_COMPLETE = "TOGGLE_COMPLETE"
+export const CLEAR_COMPLETED = "CLEAR COMPLETED"
 
 //action creators
 
@@ -26,3 +27,8 @@ export const toggleComplete = id => {
 }
 
 //clear completed
+export const clearCompleted = () => {
+    return {
+        type: CLEAR_COMPLETED
+    }
+}
