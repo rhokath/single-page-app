@@ -9,7 +9,7 @@ const TodoForm = () => {
     const handleSubmit = e => {
         e.preventDefault();
         dispatch(addTodo(newTodo))
-        // setNewTodo('')
+        setNewTodo('')
 
     }
     const handleChange = e => {
@@ -30,8 +30,8 @@ const TodoForm = () => {
             value={newTodo}
             onChange={handleChange}
             />
-            <button>add todo</button>
-            <button onClick={(e)=> handleClear(e)}>clear completed todos</button>
+            <button className="addButton">add todo</button>
+            <button className="clearButton" onClick={(e)=> handleClear(e)}>clear completed todos</button>
         </form>
     )
 }

@@ -18,7 +18,7 @@ const TodoList = () => {
     //basic usage could also use props via closure to determine what to extract
     const todos = useSelector(state => state.todos)
     return(
-        <div>
+        <div className="list">
             TodoList
             {todos.map(todo => {
                 console.log(todo)

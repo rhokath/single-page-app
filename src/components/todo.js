@@ -1,4 +1,5 @@
 import React from 'react';
+import './todo.scss'
 import { useDispatch} from 'react-redux';
 import { toggleComplete } from '../actions';
 //dispatch hook should be used in components according to docs
