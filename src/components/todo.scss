@@ -1,5 +1,7 @@
 .todo {
-    color: blue
+    color: blue;
+    margin-top: 1rem;
+    padding: 1rem;
 }
 .list{
     display: flex;
@@ -45,18 +47,22 @@ form {
 
 .todo{
     border: 1px solid red;
-    margin: 0 auto;
+    margin: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
     align-content: center;
     h1{
-        border: 1px solid yellow;
+        border: 1px solid violet;
     }
     h2{
         border: 1px solid pink;
     }
     p{
         border: 1px solid green;
+        flex-basis: auto;
     }
+}
+.completed{
+    text-decoration: line-through;
 }

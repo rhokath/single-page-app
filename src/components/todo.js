@@ -8,7 +8,7 @@ const TodoItem = ({item, id, completed})=>{
     const dispatch = useDispatch();
     return(
         <div className='todo'>
-    <h1>{item}</h1>
+            {completed? <h1 className='completed'>{item}</h1>: <h1>{item}</h1>}
     {completed ? <h2>completed</h2>: <h2>not completed</h2>}
          <p onClick={()=> dispatch(toggleComplete(id))}>toggle</p>
         </div>
