@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      my app
+      my redux hooks todo app
       </header>
       <div className='container'>
       <TodoList/>
