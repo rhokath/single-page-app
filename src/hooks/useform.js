@@ -1,7 +1,6 @@
 //create custom hook to hanlde input validation
 //referencing the upmostly.com tutorial
-import validate from './inputValidationRules'
-import {useState, useEffect} from 'react';
+import React,{useState, useEffect} from 'react';
 const useForm = (callback, validate) => {
     const [value, setValue] = useState('')
     const [errors, setErrors] = useState({})

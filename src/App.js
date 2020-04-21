@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import TodoList from './components/todolist'
 import TodoForm from './components/todoform'
+import Form from './components/form'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       my redux hooks todo app
       </header>
       <div className='container'>
+      <Form/>
       <TodoList/>
       <TodoForm/>
       </div>
