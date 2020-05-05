@@ -1,16 +1,20 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import TodoList from './components/todolist'
 import TodoForm from './components/todoform'
+import Form from './components/form'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      my app
+      my redux hooks todo app
+      </header>
+      <div className='container'>
+      <Form/>
       <TodoList/>
       <TodoForm/>
-      </header>
+      </div>
     </div>
   );
 }
